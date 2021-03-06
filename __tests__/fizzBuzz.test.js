@@ -1,9 +1,5 @@
 const sample = require("../app/fizzBuzz.js");
 
-test("test 1.", () => {
-  expect(sample.fizzBuzz(1)).toBe(1);
-});
-
 // FizzBuzz
 // テスト容易性：高 重要度：高
 // 数を文字列に変換する
