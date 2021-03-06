@@ -1,4 +1,4 @@
-const sample = require("../app/sample.js");
+const sample = require("../app/fizzBuzz.js");
 
 test("test 1.", () => {
   expect(sample.fizzBuzz(1)).toBe(1);
