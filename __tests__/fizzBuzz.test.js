@@ -11,7 +11,12 @@ const sample = require("../app/fizzBuzz.js");
 // 3と5両方の倍数のときは数の代わりに "FizzBuzz"  に変換する。
 // テスト容易性：低 重要度：低
 // 1から100までの数字を出力せよ。
-test("数を文字列に変換する", () => {
+test('1を渡すと文字列 "1" に変換する', () => {
   // 検証
   expect(sample.fizzBuzz(1)).toBe("1");
+});
+
+test('2を渡すと文字列 "2" に変換する', () => {
+  // 検証
+  expect(sample.fizzBuzz(2)).toBe("2");
 });
