@@ -1,3 +1,5 @@
+const sample = require("../app/sample.js")
+
 test('test 1.', () => {
-    expect(1 + 2).toBe(3)
+    expect(sample.fizzBuzz(1)).toBe(1)
 })
