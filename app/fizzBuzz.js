@@ -1,3 +1,3 @@
 exports.fizzBuzz = (num) => {
-  return "1";
+  return String(num);
 };
