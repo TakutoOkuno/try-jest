@@ -9,6 +9,7 @@ const sample = require("../app/fizzBuzz.js");
 // 3の倍数のときは数の代わりに "Fizz" に変換する。
 // 3を渡すと文字列 "Fizz" を返す
 // 5の倍数のときは数の代わりに "Buzz" に変換する。
+  // 5を渡すと文字列 "Buzz" を返す
 // 3と5両方の倍数のときは数の代わりに "FizzBuzz"  に変換する。
 // テスト容易性：低 重要度：低
 // 1から100までの数字を出力せよ。
@@ -22,4 +23,8 @@ test('2を渡すと文字列 "2" に変換する', () => {
 
 test('3を渡すと文字列 "Fizz" を返す', () => {
   expect(sample.fizzBuzz(3)).toBe("Fizz");
+});
+
+test('5を渡すと文字列 "Buzz" を返す', () => {
+  expect(sample.fizzBuzz(5)).toBe("Buzz");
 });
