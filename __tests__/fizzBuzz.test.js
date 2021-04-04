@@ -14,19 +14,25 @@ const sample = require("../app/fizzBuzz.js");
 // 15を渡すと文字列 "FizzBuzz" を返す
 // テスト容易性：低 重要度：低
 // 1から100までの数字を出力せよ。
-test('数を渡すと文字列に変換する', () => {
-  expect(sample.fizzBuzz(1)).toBe("1");
-});
-
-test('3の倍数のときは数の代わりに "Fizz" に変換する', () => {
-  expect(sample.fizzBuzz(3)).toBe("Fizz");
-});
-
-test('5の倍数のときは数の代わりに "Buzz" に変換する', () => {
-  expect(sample.fizzBuzz(5)).toBe("Buzz");
-});
-
-test('3と5両方の倍数のときは数の代わりに "FizzBuzz"  に変換する', () => {
-  expect(sample.fizzBuzz(15)).toBe("FizzBuzz");
-  expect(sample.fizzBuzz(45)).toBe("FizzBuzz");
-});
+describe('fizzBuzz メソッドは受け取った数に応じて文字列に変換する', () => {
+  describe('受け取った数が特定の条件に合致するとき、特定の文字列を返す', () => {
+    test('3の倍数のときは数の代わりに "Fizz" に変換する', () => {
+      expect(sample.fizzBuzz(3)).toBe("Fizz");
+    });
+    
+    test('5の倍数のときは数の代わりに "Buzz" に変換する', () => {
+      expect(sample.fizzBuzz(5)).toBe("Buzz");
+    });
+    
+    test('3と5両方の倍数のときは数の代わりに "FizzBuzz"  に変換する', () => {
+      expect(sample.fizzBuzz(15)).toBe("FizzBuzz");
+      expect(sample.fizzBuzz(45)).toBe("FizzBuzz");
+    });
+  })
+  
+  describe('その他の数を受け取ったとき、数をそのまま文字列に変換する', () => {
+    test('数を渡すと文字列に変換する', () => {
+      expect(sample.fizzBuzz(1)).toBe("1");
+    });
+  })
+})
